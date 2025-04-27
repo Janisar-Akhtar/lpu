@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>College Map Tracking</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+  <!-- Leaflet CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+    integrity="sha256-sA+e2s54cocnBWRK+6Z+XH9t2dd5ZR0vR3aeA2stE7g="
+    crossorigin=""/>
+
+  <!-- Custom CSS -->
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+  <style>
+    .canteen-card {
+      transition: transform 0.2s;
+    }
+    .canteen-card:hover {
+      transform: scale(1.02);
+    }
+    .canteen-img {
+      height: 200px;
+      object-fit: cover;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation Bar -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="#"><img src="images/logo.png" alt="Logo" /></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item active"><a class="nav-link" href="index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <div class="container mt-5 text-center">
+    <h1 class="mb-4">Welcome to Lovely Professional University</h1>
+    <p class="lead">Find your way around campus — from blocks and canteens to all amenities.</p>
+
+    <!-- Search Bar -->
+    <form class="form-inline justify-content-center mt-4">
+      <input class="form-control w-75 mr-2" type="search" placeholder="Search for Blocks, Canteens, etc." aria-label="Search"/>
+      <button class="btn btn-primary" type="submit">Search</button>
+    </form>
+
+  <!-- Page Header -->
+  <div class="container mt-5 text-center">
+    <h2>Explore Campus Canteens</h2>
+    <p class="lead">Check out the popular canteens across Lovely Professional University</p>
+  </div>
+
+  <!-- Canteen Cards -->
+  <div class="container mt-4">
+    <div class="row">
+      
+      <!-- Sample Canteen Card (Duplicate for each) -->
+      <div class="col-md-4 mb-4">
+        <div class="card canteen-card shadow-sm">
+          <img src="images/canteens/hunger-bay.jpg" class="card-img-top canteen-img" alt="Hunger Bay">
+          <div class="card-body">
+            <h5 class="card-title">Hunger Bay</h5>
+            <p class="card-text">Popular for snacks, fast food, and quick bites. Located near Block 32.</p>
+            <a href="https://maps.google.com" target="_blank" class="btn btn-sm btn-primary">View on Map</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Repeat the above div for 7 more canteens -->
+      
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="bg-light text-center py-4 mt-5">
+    <p>&copy; 2025 College Map Tracking. All rights reserved.</p>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

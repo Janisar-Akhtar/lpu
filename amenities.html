@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>College Map Tracking</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+  <!-- Leaflet CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+    integrity="sha256-sA+e2s54cocnBWRK+6Z+XH9t2dd5ZR0vR3aeA2stE7g="
+    crossorigin=""/>
+
+  <!-- Custom CSS -->
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+</head>
+<body>
+  <!-- Navigation Bar -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="#"><img src="images/logo.png" alt="Logo" /></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item active"><a class="nav-link" href="index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <div class="container mt-5 text-center">
+    <h1 class="mb-4">Welcome to Lovely Professional University</h1>
+    <p class="lead">Find your way around campus — from blocks and canteens to all amenities.</p>
+
+    <!-- Search Bar -->
+    <form class="form-inline justify-content-center mt-4">
+      <input class="form-control w-75 mr-2" type="search" placeholder="Search for Blocks, Canteens, etc." aria-label="Search"/>
+      <button class="btn btn-primary" type="submit">Search</button>
+    </form>
+
+  <div class="container mt-5">
+    <h2 class="text-center mb-4">Campus Amenities</h2>
+    <div class="row">
+      <!-- Hospitals -->
+      <div class="col-md-4 mb-4">
+        <div class="card shadow-sm h-100">
+          <div class="card-body text-center">
+            <i class="fas fa-hospital fa-2x mb-3"></i>
+            <h5 class="card-title">Hospitals</h5>
+            <p class="card-text">On-campus medical facilities for emergencies and general health care.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- ATMs -->
+      <div class="col-md-4 mb-4">
+        <div class="card shadow-sm h-100">
+          <div class="card-body text-center">
+            <i class="fas fa-credit-card fa-2x mb-3"></i>
+            <h5 class="card-title">ATMs</h5>
+            <p class="card-text">Convenient banking services with multiple ATM points around campus.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Unimalls -->
+      <div class="col-md-4 mb-4">
+        <div class="card shadow-sm h-100">
+          <div class="card-body text-center">
+            <i class="fas fa-shopping-cart fa-2x mb-3"></i>
+            <h5 class="card-title">Unimalls</h5>
+            <p class="card-text">Shops and stores to meet all your daily and lifestyle needs.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Parks -->
+      <div class="col-md-4 mb-4">
+        <div class="card shadow-sm h-100">
+          <div class="card-body text-center">
+            <i class="fas fa-tree fa-2x mb-3"></i>
+            <h5 class="card-title">Parks</h5>
+            <p class="card-text">Green spaces for relaxation, walks, and outdoor activities.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Vehicle Assistance -->
+      <div class="col-md-4 mb-4">
+        <div class="card shadow-sm h-100">
+          <div class="card-body text-center">
+            <i class="fas fa-car fa-2x mb-3"></i>
+            <h5 class="card-title">Vehicle Assistance</h5>
+            <p class="card-text">On-campus help for vehicle breakdowns, maintenance, and support.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Indoor Stadium -->
+      <div class="col-md-4 mb-4">
+        <div class="card shadow-sm h-100">
+          <div class="card-body text-center">
+            <i class="fas fa-dumbbell fa-2x mb-3"></i>
+            <h5 class="card-title">Indoor Stadium</h5>
+            <p class="card-text">Modern indoor sports facilities for various physical activities.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Library -->
+      <div class="col-md-6 mb-4">
+        <div class="card shadow-sm h-100">
+          <div class="card-body text-center">
+            <i class="fas fa-book fa-2x mb-3"></i>
+            <h5 class="card-title">Library</h5>
+            <p class="card-text">A vast collection of academic resources, journals, and digital books.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Innovation Studio -->
+      <div class="col-md-6 mb-4">
+        <div class="card shadow-sm h-100">
+          <div class="card-body text-center">
+            <i class="fas fa-flask fa-2x mb-3"></i>
+            <h5 class="card-title">Lab Facility (Innovation Studio)</h5>
+            <p class="card-text">Advanced labs supporting creativity, research, and engineering projects.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="bg-light text-center py-4 mt-5">
+    <p>&copy; 2025 College Map Tracking. All rights reserved.</p>
+  </footer>
+
+  <!-- JS -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

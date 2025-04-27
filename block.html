@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>College Map Tracking</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <!-- Leaflet CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+      integrity="sha256-sA+e2s54cocnBWRK+6Z+XH9t2dd5ZR0vR3aeA2stE7g="
+      crossorigin=""/>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+</head>
+<body>
+
+  <!-- Navigation Bar -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="#"><img src="images/logo.png" alt="Logo" /></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item active"><a class="nav-link" href="index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <div class="container mt-5 text-center">
+    <h1 class="mb-4">Welcome to Lovely Professional University</h1>
+    <p class="lead">Find your way around campus — from blocks and canteens to all amenities.</p>
+
+    <!-- Search Bar -->
+    <form class="form-inline justify-content-center mt-4">
+      <input class="form-control w-75 mr-2" type="search" placeholder="Search for Blocks, Canteens, etc." aria-label="Search"/>
+      <button class="btn btn-primary" type="submit">Search</button>
+    </form>
+
+  <div class="container mt-5">
+    <h1 class="mb-4 text-center">Campus Blocks</h1>
+    <div class="row">
+      <!-- Cards for each block -->
+      <div class="col-md-4 mb-4" *ngFor="let block of blocks">
+        <div class="card block-card p-4 shadow-sm">
+          <div class="card-body text-center">
+            <h5 class="card-title">{{ block.name }}</h5>
+            <p class="card-text">Block No: {{ block.number }}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const blocks = [
+      { number: "01", name: "LIM" },
+      { number: "02", name: "Campus Café" },
+      { number: "03", name: "Auditorium" },
+      { number: "04", name: "LIT Engineering" },
+      { number: "05", name: "LIT Pharmacy" },
+      { number: "06", name: "LIT Architecture" },
+      { number: "07", name: "LIT Pharmacy" },
+      { number: "08", name: "Shri Baldev Raj Mittal Hospital" },
+      { number: "09", name: "Girls Hostel 1" },
+      { number: "10", name: "Girls Hostel 2" },
+      { number: "11", name: "Girls Hostel 3" },
+      { number: "12", name: "Girls Hostel 4" },
+      { number: "13", name: "LIT Polytechnic" },
+      { number: "14", name: "Business Block" },
+      { number: "15", name: "Lovely Mall" },
+      { number: "16", name: "Hotel Mgt" },
+      { number: "17", name: "Mall - II" },
+      { number: "18", name: "Education" },
+      { number: "19", name: "Auditorium" },
+      { number: "20", name: "LSB" },
+      { number: "21", name: "Girl Hostel 5" },
+      { number: "22", name: "Girl Hostel 6" },
+      { number: "23", name: "Auditorium" },
+      { number: "24", name: "Auditorium" },
+      { number: "25", name: "Engineering" },
+      { number: "26", name: "Engineering" },
+      { number: "27", name: "Engineering" },
+      { number: "28", name: "Engineering" },
+      { number: "29", name: "Engineering" },
+      { number: "30", name: "Chancellor Office" },
+      { number: "31", name: "Administrative Block" },
+      { number: "32", name: "Administrative Block" },
+      { number: "33", name: "Engineering" },
+      { number: "34", name: "Engineering" },
+      { number: "35", name: "Engineering" },
+      { number: "36", name: "Engineering" },
+      { number: "37", name: "Engineering" },
+      { number: "38", name: "Engineering" },
+      { number: "39", name: "STP" },
+      { number: "40", name: "Store" },
+      { number: "41", name: "Staff Residence" },
+      { number: "42", name: "Staff Residence" },
+      { number: "43", name: "Boys Hostel 1" },
+      { number: "45", name: "Boys Hostel 2" },
+      { number: "46", name: "Boys Hostel 3" },
+      { number: "47", name: "Boys Hostel 4" },
+      { number: "51", name: "Boys Hostel 5" },
+      { number: "52", name: "Boys Hostel 6" },
+      { number: "53", name: "Academic Block 1" },
+      { number: "54", name: "Academic Block 2" },
+      { number: "55", name: "Academic Block 3" }
+    ];
+
+    const container = document.querySelector(".row");
+    container.innerHTML = blocks.map(block => `
+      <div class="col-md-4 mb-4">
+        <div class="card block-card p-4 shadow-sm">
+          <div class="card-body text-center">
+            <h5 class="card-title">${block.name}</h5>
+            <p class="card-text">Block No: ${block.number}</p>
+          </div>
+        </div>
+      </div>
+    `).join("");
+  </script>
+</body>
+</html>
